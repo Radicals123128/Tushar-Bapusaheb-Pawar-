@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html>
+<head><title>radical</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  /* Background Image */
+body {
+  background-image: url('https://images.unsplash.com/photo-1598748880042-5e095ecc13b0?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  
+  
+          /* Your existing CSS styles */
+
+        /* Adjustments for the logo and navigation bar */
+        .logo {
+            display: inline-block;
+            margin-right: 20px; /* Adjust spacing as needed */
+        }
+
+        .navbar {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .navbar a {
+            padding: 12px;
+            color: black;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .navbar a:hover {
+            background-color: rgb(90, 197, 230);
+        }
+
+        .active {
+            background-color: rgb(90, 197, 230);
+        }
+
+        @media screen and (max-width: 500px) {
+            .navbar a {
+                float: none;
+                display: block;
+            }
+        }
+
+  .container {
+      text-align: center;
+      color: var(--color);
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+     /* background-image: url(https://images.unsplash.com/photo-1601024445121-e5b82f020549?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBhcmFjaHV0ZSUyMGp1bXB8ZW58MHx8MHx8fDA%3D);*/
+      background-size: cover;
+      background-position: center;
+      
+    /*  this is where the magic happens:  */
+      background-attachment: fixed;
+    }
+    
+    .container{
+             
+            
+            
+             
+            
+            transition: all 0.3s ease;
+            outline: none;
+        }
+    
+    h1 {
+      font-weight: 700;
+      font-size: 3rem;
+    }
+    
+    p {
+      max-width: 52ch;
+      line-height: 1.5;
+      padding: 1em;
+    }
+    
+    a {
+      display: inline-block;
+      padding: 1em 3.5em;
+      background-color: var(--color);
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-radius: 0.3em;
+      font-weight: 700;
+      letter-spacing: .5px;
+      font-size: .875rem;
+    }
+    
+    .blank,
+    .other {
+      width: 100%;
+      min-height: 60vh;
+      background-color: var(--color);
+    }
+    
+     
+    
+    h3 {
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin-top: 1em;
+    }
+    
+    .card > a {
+      margin-bottom: 2em;
+    }
+    
+    .item {
+      display: flex;
+      max-width: 320px;
+      background-color: white;;
+      flex-direction: column;
+      align-items: center;
+      border-radius: .5em;
+      -webkit-box-shadow: 0px 29px 38px -15px rgba(130, 102, 102, 0.43);
+      -moz-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+      box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+    }
+    
+    .img {
+      width: 90%;
+      height: 200px;
+      background-color: white;
+      background-size: cover;
+      background-position: center;
+      margin-top: 20px;
+      border-radius: .3em;;
+    }
+    
+    .img-first {
+      background-image: url(https://media2.thrillophilia.com/images/photos/000/174/029/original/1570877652_shutterstock_1470138248.jpg?w=753&h=450&dpr=1.0);
+    }
+    
+    .img-second {
+      background-image: url(https://media2.thrillophilia.com/images/photos/000/089/020/original/1466084925_speedboat-271768_960_720.jpg?w=753&h=450&dpr=1.0);
+    }
+    
+    .img-third {
+      background-image: url(https://media2.thrillophilia.com/images/photos/000/174/055/original/1603472346_shutterstock_636897448.jpg?w=753&h=450&dpr=1.0);
+    }
+    
+    .second {
+      flex-direction: row;
+      gap: 1.6em;
+    }
+  /* Basic button styles */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff8800;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* Button hover effect */
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Button click effect */
+.button:active {
+  transform: translateY(2px);
+}
+
+/* Button pulse effect */
+.pulse {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.cta-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+     /* Style for the scrolling container */
+     .scroll-container {
+            white-space: nowrap; /* Prevent text from wrapping */
+            overflow: hidden; /* Hide overflowing content */
+            animation: scrollText 30s linear infinite; /* Animation for scrolling */
+        }
+
+        /* Keyframes for scrolling animation */
+        @keyframes scrollText {
+            0% {
+                transform: translateX(100%); /* Start off-screen to the right */
+            }
+            100% {
+                transform: translateX(-100%); /* Scroll to the left */
+            }
+        }
+    #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: rgb(221, 75, 202);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#myBtn:hover {
+    background-color: #555;
+}
+
+    body {
+  background-color: rgb(90, 197, 230);
+    }
+    body {font-family: Arial, Helvetica, sans-serif;}
+
+ 
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+.container img {vertical-align: middle;}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust as needed */
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container img {vertical-align: middle;}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+.header {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to right, #1abc9c, #3498db); /* Gradient background */
+    color: white;
+    font-size: 24px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #4cbfce; /* Change the background color as needed */
+    color: #fff; /* Text color */
+    padding: 50px 0; /* Adjust padding as needed */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-section h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.contact span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links ul li {
+    margin-bottom: 10px;
+}
+
+.links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 24px;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+    background-color: #c5e72d; /* Change the background color as needed */
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+ /* Additional styles */
+ .section {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        .section p {
+            margin-bottom: 40px;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .cta-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .cta-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .cta-btn:active {
+            transform: translateY(2px);
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .feature {
+            max-width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .feature p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .feature .icon {
+            margin-bottom: 40px;
+            font-size: 3em;
+            color: #007bff;
+        }
+                /* Position the share button */
+                .share-button {
+            position: fixed;
+            bottom: 80px;
+            right: 40px;
+            z-index: 999;
+        }
+
+        /* Style the WhatsApp logo */
+        .share-button img {
+            border-radius: 50%;
+            background-color: #25d366; /* WhatsApp green */
+            padding: 1px;
+            transition: transform 0.3s ease;
+        }
+
+        /* Add hover effect to the WhatsApp logo */
+        .share-button img:hover {
+            transform: scale(1.1);
+        }
+        .fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+clg-sec{
+    padding: 30px;
+    height: 700px;
+    background-color: whitesmoke;
+  }
+  
+  .clg-sec .txt{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  
+  .clg-sec .main-box{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;   
+    justify-content: center;
+    column-gap: 10px;
+    align-items: center;
+  }
+  
+  .clg-sec .main-box .box{
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  
+  .clg-sec .mai-img-box{
+    display: flex;
+    /* column-gap: 20px; */
+    flex-direction: column;
+  }
+  
+  .clg-sec .main-box .box img{
+    width: 357px;
+    height: 565px;
+  }
+  
+  .clg-sec .main-box .box2 img{
+    width: 375px;
+    height: 250px;
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  
+  .clg-sec .main-box .box3 img{
+    width: 375px;
+    height: 250px;
+    padding: 20px;
+    background-color: white;
+    margin: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 8px;
+  }  
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  .co {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  h2 {
+    color: #333;
+  }
+  .feature {
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+    cursor: pointer;
+  }
+  .feature img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  .feature img:hover {
+    transform: scale(1.1);
+  }
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .feature:hover .overlay {
+    opacity: 1;
+  }
+  .overlay img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .overlay p {
+    color: #fff;
+    margin-top: 10px;
+  }
+  .package-deals {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.package-deals h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.package-deals ul {
+  list-style: none;
+  padding: 0;
+}
+
+.package-deals li.deal {
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.package-deals li.deal:hover {
+  transform: translateY(-5px);
+}
+
+.package-deals h3 {
+  color: #555;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.package-deals p {
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.package-deals button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.package-deals button:hover {
+  background-color: #45a049;
+}
+.co h2 {
+            color: #ffe033; /* Change color as desired */
+            font-family: Arial, sans-serif; /* Change font-family as desired */
+        }
+        h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-top: 50px;
+  font-family: 'Pacifico', cursive; /* Stylish font */
+  color: #f19022; /* Blue font color */
+}
+
+p {
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+  font-family: 'Roboto', sans-serif; /* Stylish font */
+   
+}
+
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="scroll-container">
+        <font color="black">
+            <p style="font-size: 30px;"><b>"Ride the Waves, Feel the Thrill!"</b></p>
+        </font>
+    </div>
+</div>
+<div class="boat"></div>
+<div class="parasail"></div>
+    <!-- Share button with WhatsApp logo -->
+    <a href="whatsapp://send?text=Check out this awesome website! file:///E:/main%20website/new.html" class="share-button">
+      <img src="https://www.freeiconspng.com/thumbs/logo-whatsapp-png/logo-whatsapp-picture-images-hd-6.png" alt="WhatsApp" width="40" height="40">
+  </a>
+
+
+<!-- Optional: Add more content below -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+    <script>
+        // Get the button element
+let mybutton = document.getElementById("myBtn");
+
+// Show the button when the user scrolls down 20px from the top
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+// Scroll to the top of the document when the button is clicked
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+}
+
+
+    </script>
+<div class="logo">
+  <img src="logo.jpg" width="100" height="100">
+</div>
+<div class="navbar">
+  <a class="new.html" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="bestoffer.html"><i class="fa fa-fw fa-search"></i> Best Offer</a>
+  <a href="about.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+  <a href="login1.html"><i class="fa fa-fw fa-user"></i> Login</a>
+  <a href="book.html"><i class="fa fa-fw fa-user"></i> Book</a>
+  <a href="villa.html"><i class='fas fa-bed'></i> Villas</a>
+  <a href="carrent.html"><i class= "fas fa-biking"></i> Cars on Rent</a>
+</div>
+ 
+
+<div class="container">
+  <div class="w3-content w3-display-container">
+    <img class="mySlides" src="https://w0.peakpx.com/wallpaper/744/299/HD-wallpaper-parasailing-sky-parachute-sea.jpg" style="width:100%">
+    <img class="mySlides" src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdhdGVyJTIwc3BvcnRzfGVufDB8fDB8fHww" style="width:100%">
+    <img class="mySlides" src="https://www.seawatersports.com/img/newimage/activies/slide/5-in-1-water-sports-combo-2.webp" style="width:100%">
+    <img class="mySlides" src="https://media2.thrillophilia.com/images/photos/000/048/586/original/1552479987_alibaug_water_sports.png?gravity=center&width=1280&height=642&crop=fill&quality=auto&fetch_format=auto&flags=strip_profile&format=jpg&sign_url=true" style="width:100%">
+    <div class="content">
+      <h1><b>Let Your Adrenaline Rush.....</b></h1>
+      <p>"Aparicchhinna aatmaa anveshanam”</p>
+    </div>
+  </div>
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+  
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+  
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    x[slideIndex-1].style.display = "block";  
+  }
+</script>
+
+    <br>
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="Activities and water sports at Kurumba Maldives resorts.mp4" type="video/mp4">
+            <!-- Add other video formats (e.g., WebM, Ogg) here -->
+        </video>
+    </div>
+    <script>
+        // app.js
+const video = document.querySelector('video');
+
+// Pause the video when the user clicks on it
+video.addEventListener('click', () => {
+    if (video.paused) {
+        video.play();
+    } else {
+        video.pause();
+    }
+});
+
+    </script><br>
+    
+
+    <div class="container">
+      <img src="https://media2.thrillophilia.com/images/photos/000/089/012/original/1603472530_shutterstock_1441954655.jpg?w=753&h=450&dpr=1.0" alt="Notebook" style="width:100%;">
+      <div class="content">
+        <h1><b>1.Parasailing</b></h1>
+        <p>Parasailing is one of the most loved water sports in Alibaug, giving you the elegant bird's eye view of some of the most beautiful beaches in the country. While high in the air, you can also have a beautiful view of Mumbai city. Sports are totally safe and can be enjoyed by everyone.
+
+            There is nothing to learn and remember, just sit back and relax and enjoy the activity. One place where you can enjoy parasailing in Alibaug is Mandawa Beach, where various experienced professionals offer parasailing activity.
+            
+            Location: Nagaon Beach, Alibaug
+            
+            Price: The price of parasailing activity will be approximately INR 1000 per person. 
+            
+            Popular Reads: Comfortable and Affordable stays in Alibaug.</p>
+            	<a href="about.html"><button class="button pulse">INR 1000</button></a>
+      </div>
+    </div>
+    <script>
+      // JavaScript to handle button effects
+      const buttons = document.querySelectorAll('.button');
+      
+      buttons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Add shake effect on click
+          this.classList.toggle('shake');
+          
+          // Reset shake effect after animation ends
+          this.addEventListener('animationend', function() {
+            this.classList.remove('shake');
+          });
+        });
+      });
+      </script><br>
+    <div class="container">
+        <img src="https://media2.thrillophilia.com/images/photos/000/089/021/original/1466085139_Sea_Kayak.JPG?w=753&h=450&dpr=1.0" alt="Notebook" style="width:100%;">
+        <div class="content">
+          <h1><b>2.Sea Kayaking</b></h1>
+          <p>If you are wondering, where to go for kayaking in Alibaug as there are no calm waters? The answer to the question is, kayaking can be performed on any surface of the water. Though the sea kayaks are a little different from the regular ones. A sea kayak can be up to 15 feet long and has enough volume in the stern to keep it moving.
+
+            Another reason for the sea kayaks being longer is to keep extra gears, which you might need during emergency conditions while traveling long distances and the design of the same is done in such a way that it is easy to maneuver over rough ocean waters. It is a good alternative for a surfboard. 
+            
+            Location: Mandwa Beach, Alibaug
+            
+            Price: The price of sea kayaking may be up to INR 300 per person. 
+            
+            Check Out: Best Villas in Alibaug to stay with couples and friends</p>
+            <a href="about.html"><button class="button pulse">INR 300</button></a>
+        </div>
+      </div><br>
+      <div class="container">
+        <img src="https://media2.thrillophilia.com/images/photos/000/089/019/original/1466084497_Discover_Scuba_Diving_--_St._Croix__US_Virgin_Islands.jpg?w=753&h=450&dpr=1.0" alt="Notebook" style="width:100%;">
+        <div class="content">
+          <h1><b>
+            3.Scuba Diving</b></h1>
+          <p>Scuba Diving is one of the newest water sports in Alibaug and has attracted a lot of new visitors who used to go to other locations for scuba diving. Whether you want to learn scuba diving or you are a professional diver and want to go for divings, Alibaug is the place where your diving dreams may become a reality.
+
+            All the trainers here are P.A.D.I. trained divers who conduct courses for the beginners. You can go for scuba diving in Alibaug near Murud Janjira.
+            
+            Location: Near Murud Janjira, Alibaug
+            
+            Price: The price of scuba diving may cost around INR 4500 for a single dive.
+            <br><a href="about.html"><button class="button pulse">Rs.4500</button></a>
+            </p>
+        </div>
+      </div>
+      <main>
+         <br>
+          
+           
+          
+          <div class="container second">
+          <div class="item">
+            <div class="img img-first"></div>
+            <div class="card">
+            <h3>Kite Boarding</h3>
+            <p>Known to be a surface watersport, Kiteboarding combines all aspects of wakeboarding, windsurfing, surfing, paragliding, and gymnastics into a magical breathtaking sport. By harnessing the power of the gushing wind, a kitesurfer or kiteboarder controls a large kite and propels it across the humongous ocean.
+            </p>
+            <button class="button pulse">INR 1500</button></a>
+            </div>
+          </div>
+          <div class="item">
+            <div class="img img-second"></div>
+            <div class="card">
+            <h3>Speed Boat Ride</h3>
+            <p>Riding the waves of Arabian Sea on a speed boat ride, feeling the thrill of whistling winds and breaking waves can be too much fun. During the trip, the speed of boats may reach up to 50 mph, which can be immensely exciting, making speed boat rides one of the most loved water sports</p>
+            <button class="button pulse">INR 2000</button></a>
+            </div>
+          </div>
+          <div class="item">
+            <div class="img img-third"></div>
+            <div class="card">
+            <h3>Stand Up Paddle-Boarding</h3>
+            <p> This adventure sport will give you quite an idea of Paddle-boarding. All one has to do is just take part in the introductory class held at Mandawa Beach itself, lead on with instructions and become a well-trained SUP boarder.</p>
+            <button class="button pulse">INR 700</button></a>
+            </div>
+          </div>
+          </div><br><br>
+          <div class="section">
+            <h2><b>Discover More Adventures</b></h2>
+            <b>Explore some of the exciting activities we offer to make your experience unforgettable.</b><br><br>
+            <div class="features">
+                <div class="feature">
+                    <div class="icon"><i class="fa fa-ship"></i></div>
+                    <h3>Jet Skiing</h3>
+                    <p>Ride the waves on a high-speed jet ski and feel the adrenaline rush.</p>
+                    <a href="book.html" class="cta-btn">Book Now</a>
+                </div>
+                <div class="feature">
+                    <div class="icon"><i class="fa fa-trophy"></i></div>
+                    <h3>Snorkeling</h3>
+                    <p>Explore the vibrant underwater world and witness marine life up close.</p>
+                    <a href="book.html" class="cta-btn">Book Now</a>
+                </div>
+                <div class="feature">
+                    <div class="icon"><i class="fa fa-sun-o"></i></div>
+                    <h3>Parasailing</h3>
+                    <p>Soar high above the sea and enjoy breathtaking views from the sky.</p>
+                    <a href="book.html" class="cta-btn">Book Now</a>
+                </div>
+            </div>
+        </div><br><br>
+        <div class="container">
+        <div class="package-deals">
+  <h2><b>Package Deals</b></h2>
+  <ul>
+    <li class="deal">
+      <h3><b>Adventure Combo</b></h3>
+      <p>Get 20% off when you book Jet Skiing and Parasailing together!</p><br>
+      <img src="https://cdn2.veltra.com/ptr/20171023193617_1974339015_2156_0.jpg?imwidth=1000&impolicy=custom"height="300px">
+      <br><br><button onclick="applyDiscount(0.2)">Book Now</button>
+    </li>
+    <li class="deal"><br><br>
+      <h3><b>Family Fun Pack</b></h3>
+      <p>Book Banana Boat Ride, Kayaking, and Snorkeling for the whole family and save 15%!</p>
+      <img src="https://cdn2.veltra.com/ptr/20130408232356_1694761297_2708_0.jpg?imwidth=1000&impolicy=custom"height="300px"><br><br>
+      <button onclick="applyDiscount(0.15)">Book Now</button>
+    </li>
+  </ul>
+</div>
+</div>
+<script>function applyDiscount(discount) {
+  // Code to apply the discount and proceed with the booking
+  // You can customize this function based on your specific requirements
+  // For example, you can calculate the discounted price, update the booking form, etc.
+  console.log("Discount applied: " + (discount * 100) + "%");
+}
+</script><br><br>
+ 
+    <section class="clg-sec">
+      <div class="txt">
+          <h1></h1>
+          <p></p>
+      </div>
+    
+      <div class="main-box">
+          <div class="box">
+              <img src="https://theleelasresort.in/wp-content/uploads/2023/09/leelas_water_family_boating.jpg"
+                  alt="">
+          </div>
+    
+          <div class="mai-img-box">
+              <div class="box2">
+                  <img src="https://images.pexels.com/photos/1604869/pexels-photo-1604869.jpeg?cs=srgb&dl=pexels-apg-graphics-1604869.jpg&fm=jpg"
+                      alt="">
+                  <img src="https://www.islandexpeditions.com/sites/default/files/2023-12/Blog%20Holiday%20Gifts.jpg"
+                      alt="">
+    
+              </div>
+    
+              <div class="box3">
+                  <img src="https://watersportnovalja.com/wp-content/uploads/2023/05/photo_2023-05-16_17-49-14-3.jpg"
+                      alt="">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Water_sports_composite.jpg/1200px-Water_sports_composite.jpg"
+                      alt="">
+    
+              </div>
+          </div>
+      </div>
+    
+      </div>
+        </section>
+    
+    
+      <!-- Additional section with content and animations -->
+<div class="section">
+  <h2><b>Why Choose Us?</b></h2>
+  <b>Discover why we are the best in providing thrilling water sports experiences.</b><br><br>
+  <div class="features">
+      <div class="feature">
+          <div class="icon"><i class="fa fa-trophy"></i></div>
+          <h3>Professional Instructors</h3>
+          <p>Our team consists of highly trained and experienced instructors who prioritize safety and fun.</p>
+      </div>
+      <div class="feature">
+          <div class="icon"><i class="fa fa-clock-o"></i></div>
+          <h3>Flexible Timings</h3>
+          <p>We offer flexible scheduling options to accommodate your preferences and ensure a convenient experience.</p>
+      </div>
+      <div class="feature">
+          <div class="icon"><i class="fa fa-thumbs-up"></i></div>
+          <h3>Customer Satisfaction</h3>
+          <p>Customer satisfaction is our top priority, and we strive to exceed your expectations with every visit.</p>
+      </div>
+  </div>
+</div>
+<!-- JavaScript to handle animations -->
+<script>
+  // JavaScript to handle button and feature effects
+  const button = document.querySelectorAll('.button');
+  
+  buttons.forEach(button => {
+      button.addEventListener('click', function() {
+          // Add pulse effect on click
+          this.classList.toggle('pulse');
+          
+          // Reset pulse effect after animation ends
+          this.addEventListener('animationend', function() {
+              this.classList.remove('pulse');
+          });
+      });
+  });
+</script>
+<div class="co ">
+  <h2><b>Special Features</b></h2>
+  <div class="feature">
+    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGNydWlzZSUyMHBhcnR5fGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="DJ Night">
+    <div class="overlay">
+      <img src="https://png.pngtree.com/png-clipart/20230301/original/pngtree-creative-black-and-white-transparent-dj-icon-png-image_8969286.png" alt="DJ Icon">
+      <p>DJ Night</p>
+    </div>
+  </div>
+  <div class="feature">
+    <img src="https://mirayistanbul.com/wp-content/uploads/2023/06/Bosphorus-Dinner-Cruise-2-1.png" alt="Dinner Cruise">
+    <div class="overlay">
+      <img src="https://cdn-icons-png.flaticon.com/512/3202/3202930.png" alt="Dinner Icon">
+      <p>Dinner Cruise</p>
+    </div>
+  </div>
+  <div class="feature">
+    <img src="https://www.oyster.com/wp-content/uploads/sites/35/2019/05/22658-13628711-150.jpg" alt="Adventure Cruise">
+    <div class="overlay">
+      <img src="data:image/png;base64,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" alt="Adventure Icon">
+      <p>Adventure Cruise</p>
+    </div>
+  </div>
+</div>
+
+        <footer>
+          <div class="footer-content">
+              <div class="footer-section about">
+                  <h3>About Us</h3>
+                  <p>Welcome to Water Sports Paradise, your ultimate destination for thrilling water adventures! We are dedicated to providing unforgettable experiences for water enthusiasts of all ages and skill levels.</p>
+        <p>Our team consists of passionate professionals who are experts in their respective fields, ensuring your safety and enjoyment throughout your time with us.</p>
+ 
+                  <div class="contact">
+                      <span><i class="fa fa-map-marker"></i>123 Street Name, City, Country</span>
+                      <span><i class="fa fa-phone"></i>+123-456-7890</span>
+                      <span><i class="fa fa-envelope"></i>info@example.com</span>
+                  </div>
+              </div>
+              <div class="footer-section links">
+                  <h3>Quick Links</h3>
+                  <ul>
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">About</a></li>
+                      <li><a href="#">Services</a></li>
+                      <li><a href="#">Contact</a></li>
+                  </ul>
+              </div>
+              <div class="footer-section social">
+                  <h3>Follow Us</h3>
+                  <div class="social-links">
+                      <a href="#"><i class="fa fa-facebook"></i></a>
+                      <a href="#"><i class="fa fa-twitter"></i></a>
+                      <a href="#"><i class="fa fa-instagram"></i></a>
+                      <a href="#"><i class="fa fa-linkedin"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="footer-bottom">
+              &copy; 2024 Radical. All rights reserved.
+          </div>
+      </footer>
+      
+        
+</body>
+</html>
